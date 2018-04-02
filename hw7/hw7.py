@@ -52,13 +52,14 @@ def print_stems(wordlist):
 
 text = read_text(input('Введите название файла: '))
 wordlist = find_words(text)
-if len(wordlist) != 0:
-	freq = find_freq(wordlist)
-	min_freq = min_freq(freq)
+# if len(wordlist) != 0:
+# 	freq = find_freq(wordlist)
+# 	min_freq = min_freq(freq)
 
-if len(wordlist) != 0:
-	print(len(wordlist))
-	print(min_freq)
-	print_stems(wordlist)
-else:
-	print('В тексте нет существительных с суффиксом hood')
+# if len(wordlist) != 0:
+# 	print(len(wordlist))
+# 	print(min_freq)
+# 	print_stems(wordlist)
+# else:
+# 	print('В тексте нет существительных с суффиксом hood')
+print(wordlist)
