@@ -1,0 +1,20 @@
+with open(input('Введите название файла: '), encoding='utf-8') as f:
+	text = f.read()
+text = str(text)
+text = text.strip()
+text = text.replace('?', ' ')
+text = text.replace('!', ' ')
+text = text.replace('...', ' ')
+text = text.replace('..', ' ')
+text = text.replace('.', ' ')
+text = text.replace(',', ' ')
+text = text.replace(':', ' ')
+text = text.replace(';', ' ')
+text = text.replace('(', ' ')
+text = text.replace(')', ' ')
+text = text.replace('/', ' ')
+splited_text = text.split(' ')
+for word in splited_text:
+	if len(word) > 0:
+		ans = word + '_' + '%d' % len(str(word))
+		print(ans)
