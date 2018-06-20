@@ -24,8 +24,8 @@ for filename in filelist:
 				else:
 					dic[lem] = 1
 with open('output.txt', 'w', encoding='utf-8') as fout:
-	for key, value in dic.items():
-		if not fout.writable():
-				print('Файл закрыт')
-			else:
-				fout.write(key + '\t' + value + '\n')
+	if not fout.writable():
+		print('Файл закрыт')
+	else:
+		for key, value in dic.items():
+			fout.write(key + '\t' + value + '\n')
